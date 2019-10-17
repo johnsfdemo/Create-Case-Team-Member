@@ -1,6 +1,6 @@
-# Demo Reset Tools
+# Create Case Ream Member
 
-This package contains tabs, Lightning pages, Lightning components, and other support to help me reset my orgs between demo runs.
+This package contains an invocable Apex class that adds a case team member given a user ID and case team role.
 
 ## How to Deploy This Package to Your Org
 
