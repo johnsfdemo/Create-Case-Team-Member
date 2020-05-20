@@ -16,14 +16,14 @@ global without sharing class CreateCaseTeamMember {
     private static final String FAILURE = 'FAILURE';
     
     global class Requests {
-        @InvocableVariable(required=true) global Id caseId;					// The ID of the case        
-        @InvocableVariable(required=true) global Id userId;					// The user ID of the team member        
-        @InvocableVariable(required=true) global String teamRole;			// The case team role
+        @InvocableVariable(label='ID of the case' required=true) global Id caseId;					// The ID of the case        
+        @InvocableVariable(label='User ID of the team member' required=true) global Id userId;		// The user ID of the team member        
+        @InvocableVariable(label='Case team role' required=true) global String teamRole;			// The case team role
     }
     
     global class Results {
-        @InvocableVariable global String status;							// Either 'SUCCESS' or 'FAILURE'        
-        @InvocableVariable global String message;							// In the case of FAILURE, a more detailed message
+        @InvocableVariable(label='Status ("SUCCESS" or "FAILURE")') global String status;			// Either 'SUCCESS' or 'FAILURE'        
+        @InvocableVariable(label='Error message') global String message;							// In the case of FAILURE, a more detailed message
     }    
     
     @InvocableMethod(label='Create a Case Team Member' description='Adds a user to a case\'s case team')
